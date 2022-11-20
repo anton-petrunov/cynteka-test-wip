@@ -16,7 +16,7 @@ public class DataController {
 
     @PostConstruct
     public void generate() {
-        List<String> description = dataService.generate();
+        List<String> description = dataService.getMatched();
         try (FileWriter fileWriter = new FileWriter("output.txt")) {
             for (String line : description) {
 //                https://ru.stackoverflow.com/a/574105 - using operational system line separator
