@@ -1,6 +1,5 @@
 package io.github.anton_petunov.cynteka_test.service;
 
-import io.github.anton_petunov.cynteka_test.model.Data;
 import io.github.anton_petunov.cynteka_test.repository.InMemoryDataRepository;
 import io.github.anton_petunov.cynteka_test.to.DataTo;
 import lombok.AllArgsConstructor;
@@ -20,16 +19,7 @@ public class DataService implements DataServiceInterface {
 
     @Override
     public List<String> generate() {
-        Data data = dataRepository.get();
-        List<String> first = data.getFirst().stream()
-                .map(s -> s + ":?").toList();
-
-        List<String> second = data.getSecond().stream()
-                .map(s -> s + ":?").toList();
-
-        List<String> description = new ArrayList<>(first);
-        description.addAll(second);
-        return description;
+        return null;
     }
 
     public List<DataTo> getMatched() {
